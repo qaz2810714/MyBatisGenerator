@@ -82,17 +82,17 @@
         <property name="autoDelimitKeywords" value="true"/>
         <property name="beginningDelimiter" value="`"/>
         <property name="endingDelimiter" value="`"/>
-        <commentGenerator>
+        <!--<commentGenerator>-->
+        <commentGenerator type="com.clw.generator.main.FieldCommentGenerator">
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
-            <property name="suppressAllComments" value="true"/>
-            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="false"/>
         </commentGenerator>
 
         <!--// TODO 这里输入数据库配置 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://1.1.1.1:3306/cloudstore??useunicode=true&amp;characterEncoding=utf8&amp;allowMultiQueries=true"
-                        userId="aaa"
-                        password="bbb">
+                        userId="*****"
+                        password="*****">
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.clw.ssm1.pojo"
@@ -133,7 +133,7 @@
 
         <!-- 配置不生成Exmaple文件> -->
         <!--TODO 这里输入表名及生成的Object类名-->
-        <table tableName="wms_note_transfer" domainObjectName="WmsNoteTransfer"
+        <table tableName="base_store_location" domainObjectName="BaseStoreLocation"
                enableDeleteByExample="false" selectByExampleQueryId="false"
                enableCountByExample="false" enableSelectByExample="false"
                enableUpdateByExample="false"/>
